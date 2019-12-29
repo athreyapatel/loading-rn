@@ -13,7 +13,13 @@ export default class Loading extends Component {
     }
     render(){
         return(
-            <h1>Loading</h1>
+            <div>
+                {!this.state.done ? (
+                    <ReactLoading type={"bars"} color={"white"} />
+                ) : (
+                    <h1>Loading</h1>
+                )}
+            </div>
         )
     }
 }
